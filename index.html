@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 
-<html lang="en">
+<html lang="en" style="background:#03020a">
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
@@ -52,6 +52,7 @@
 html { scroll-behavior: smooth; }
 
 body {
+background: #03020a;
 background: var(–bg);
 color: var(–text);
 font-family: ‘Raleway’, sans-serif;
@@ -1070,8 +1071,9 @@ position: relative;
 position: relative;
 border-radius: 20px;
 padding: 2px;
-background: linear-gradient(var(–angle, 0deg), #38bdf8, #8a6eff, #c084fc, #38bdf8);
-animation: borderSpin 6s linear infinite;
+background: linear-gradient(270deg, #38bdf8, #8a6eff, #c084fc, #38bdf8);
+background-size: 300% 300%;
+animation: borderSpin 5s ease infinite;
 box-shadow: 0 0 60px rgba(56,189,248,0.15), 0 0 120px rgba(138,110,255,0.1), 0 40px 80px rgba(0,0,0,0.6);
 transition: box-shadow 0.5s;
 }
@@ -1080,14 +1082,10 @@ transition: box-shadow 0.5s;
 box-shadow: 0 0 100px rgba(56,189,248,0.3), 0 0 180px rgba(138,110,255,0.2), 0 50px 100px rgba(0,0,0,0.7);
 }
 
-@property –angle {
-syntax: ‘<angle>’;
-initial-value: 0deg;
-inherits: false;
-}
-
 @keyframes borderSpin {
-to { –angle: 360deg; }
+0%   { background-position: 0% 50%; }
+50%  { background-position: 100% 50%; }
+100% { background-position: 0% 50%; }
 }
 
 .map-frame {
@@ -1138,13 +1136,13 @@ transition: filter 0.4s;
 
 .map-frame iframe:active { cursor: grabbing; }
 
-.map-frame-wrap.reveal .map-frame-outer {
+.map-frame-wrap {
 opacity: 0;
 transform: translateY(30px) scale(0.98);
 transition: opacity 0.8s cubic-bezier(0.22,1,0.36,1), transform 0.8s cubic-bezier(0.22,1,0.36,1);
 }
 
-.map-frame-wrap.visible .map-frame-outer {
+.map-frame-wrap.visible {
 opacity: 1;
 transform: translateY(0) scale(1);
 }
