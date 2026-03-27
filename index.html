@@ -4,25 +4,6 @@
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <title>AETHER SMP — Minecraft Server</title>
-
-  <!-- Open Graph / Discord / iMessage / Twitter preview -->
-  <meta property="og:type"        content="website"/>
-  <meta property="og:url"         content="https://aether-smp.vercel.app/"/>
-  <meta property="og:title"       content="⟁ AETHER SMP — Semi-Anarchy Minecraft"/>
-  <meta property="og:description" content="No rules. No mercy. Grief, raid, kill — the world is yours. Java &amp; Bedrock, cracked welcome, 24/7. IP: 185.207.166.151:19027"/>
-  <meta property="og:image"       content="https://aether-smp.vercel.app/preview.png"/>
-  <meta property="og:image:width"  content="1200"/>
-  <meta property="og:image:height" content="630"/>
-  <meta property="og:site_name"   content="Aether SMP"/>
-
-  <meta name="twitter:card"        content="summary_large_image"/>
-  <meta name="twitter:title"       content="⟁ AETHER SMP — Semi-Anarchy Minecraft"/>
-  <meta name="twitter:description" content="No rules. No mercy. Grief, raid, kill — the world is yours. Java &amp; Bedrock, cracked welcome, 24/7."/>
-  <meta name="twitter:image"       content="https://aether-smp.vercel.app/preview.png"/>
-
-  <!-- General -->
-  <meta name="description" content="Aether SMP — Semi-anarchy Minecraft survival. Grief, PvP, raid, and conquer. Java &amp; Bedrock, cracked welcome. IP: 185.207.166.151:19027"/>
-  <meta name="theme-color" content="#8a6eff"/>
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
 <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;900&family=Raleway:wght@300;400;500;600&family=Orbitron:wght@400;700;900&display=swap" rel="stylesheet"/>
@@ -57,6 +38,7 @@
     cursor: default;
   }
 
+  /* ---- STAR FIELD ---- */
   .stars-canvas {
     position: fixed;
     inset: 0;
@@ -64,6 +46,7 @@
     pointer-events: none;
   }
 
+  /* ---- NOISE OVERLAY ---- */
   body::after {
     content: '';
     position: fixed;
@@ -75,6 +58,7 @@
     z-index: 1;
   }
 
+  /* ---- NAV ---- */
   nav {
     position: fixed;
     top: 0; left: 0; right: 0;
@@ -149,6 +133,7 @@
 
   .nav-discord::after { display: none !important; }
 
+  /* ---- HERO ---- */
   #hero {
     position: relative;
     min-height: 100vh;
@@ -370,6 +355,7 @@
     background: var(--surface2);
   }
 
+  /* ---- STATS ---- */
   .stats-bar {
     display: flex;
     justify-content: center;
@@ -411,6 +397,7 @@
     color: var(--muted);
   }
 
+  /* ---- SECTIONS ---- */
   section {
     position: relative;
     z-index: 2;
@@ -459,6 +446,7 @@
     margin-bottom: 3rem;
   }
 
+  /* ---- ABOUT CARDS ---- */
   .cards-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
@@ -517,6 +505,7 @@
   }
 
 
+  /* ---- GALLERY SINGLE ---- */
   .gallery-single { margin-top: 3rem; }
 
   .gallery-frame {
@@ -602,6 +591,7 @@
 
   .gallery-note a:hover { color: var(--accent2); }
 
+  /* ---- DIVIDER ---- */
   .divider {
     width: 100%;
     height: 1px;
@@ -609,6 +599,7 @@
     margin: 0;
   }
 
+  /* ---- JOIN ---- */
   .join-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -698,6 +689,7 @@
     line-height: 1.6;
   }
 
+  /* ---- RULES ---- */
   .rules-tabs {
     margin-top: 3rem;
   }
@@ -832,7 +824,9 @@
   .badge-allowed { background: rgba(52,211,153,0.12); color: #34d399; border: 1px solid rgba(52,211,153,0.3); }
   .badge-banned  { background: rgba(248,113,113,0.12); color: #f87171; border: 1px solid rgba(248,113,113,0.3); }
 
+  /* ---- GALLERY ---- */
 
+  /* ---- FAQ ---- */
   .faq-list {
     max-width: 780px;
     margin: 3rem auto 0;
@@ -891,6 +885,7 @@
 
   .faq-item.open .faq-answer { display: block; }
 
+  /* ---- CTA ---- */
   #cta {
     text-align: center;
     background: linear-gradient(180deg, transparent, rgba(138,110,255,0.05), transparent);
@@ -920,6 +915,7 @@
     flex-wrap: wrap;
   }
 
+  /* ---- FOOTER ---- */
   footer {
     position: relative;
     z-index: 2;
@@ -965,6 +961,7 @@
 
   .footer-links a:hover { color: var(--accent); }
 
+  /* ---- TOAST ---- */
   .toast {
     position: fixed;
     bottom: 2rem;
@@ -985,6 +982,7 @@
 
   .toast.show { transform: translateX(-50%) translateY(0); }
 
+  /* ---- ANIMATIONS ---- */
   @keyframes fadeSlideDown {
     from { opacity: 0; transform: translateY(-20px); }
     to { opacity: 1; transform: translateY(0); }
@@ -1001,6 +999,7 @@
     transform: translateY(0);
   }
 
+  /* ---- RESPONSIVE ---- */
   @media (max-width: 768px) {
     nav { padding: 1rem 1.5rem; }
     .nav-links { display: none; }
@@ -1013,11 +1012,13 @@
     .stat-item:last-child { border-bottom: none; }
   }
 
+  /* ---- SCROLLBAR ---- */
   ::-webkit-scrollbar { width: 6px; }
   ::-webkit-scrollbar-track { background: var(--bg); }
   ::-webkit-scrollbar-thumb { background: rgba(138,110,255,0.3); border-radius: 3px; }
   ::-webkit-scrollbar-thumb:hover { background: var(--accent); }
 
+  /* ---- DECORATIVE LINE ---- */
   .deco-line {
     display: flex;
     align-items: center;
@@ -1048,6 +1049,7 @@
 
 <canvas class="stars-canvas" id="stars"></canvas>
 
+<!-- NAV -->
 <nav>
   <a href="#hero" class="nav-logo">⟁ <span>AETHER</span> SMP</a>
   <ul class="nav-links">
@@ -1056,10 +1058,12 @@
     <li><a href="#rules">Rules</a></li>
     <li><a href="#gallery">Gallery</a></li>
     <li><a href="#faq">FAQ</a></li>
+    <li><a href="http://185.207.166.151:12007/" target="_blank">🗺 Map</a></li>
     <li><a href="https://discord.gg/XDxxYfaMTU" class="nav-discord">Discord</a></li>
   </ul>
 </nav>
 
+<!-- HERO -->
 <section id="hero">
   <div class="hero-orb orb1"></div>
   <div class="hero-orb orb2"></div>
@@ -1075,9 +1079,9 @@
   <p class="hero-desc">Ascend beyond ordinary survival. Build empires, forge alliances, and carve your legend into the sky. Java & Bedrock — cracked welcome — 24/7.</p>
 
   <div class="hero-ips">
-    <div class="ip-card" onclick="copyIP('185.207.166.151:19027', this)">
+    <div class="ip-card" onclick="copyIP('aethermc.ultramc.co', this)">
       <div class="ip-label">💻 Java / TLauncher</div>
-      <div class="ip-value">185.207.166.151:19027 <span class="ip-copy-icon">⧉</span></div>
+      <div class="ip-value">aethermc.ultramc.co <span class="ip-copy-icon">⧉</span></div>
     </div>
     <div class="ip-card" onclick="copyIP('185.207.166.151', this)">
       <div class="ip-label">📱 Bedrock / Mobile</div>
@@ -1092,13 +1096,14 @@
   </div>
 </section>
 
+<!-- STATS BAR -->
 <div class="stats-bar">
   <div class="stat-item">
     <span class="stat-number" id="online-count">—</span>
     <span class="stat-label">Online Now</span>
   </div>
   <div class="stat-item">
-    <span class="stat-number" id="max-slots">1000+</span>
+    <span class="stat-number">100</span>
     <span class="stat-label">Max Slots</span>
   </div>
   <div class="stat-item">
@@ -1113,6 +1118,7 @@
 
 <div class="divider"></div>
 
+<!-- ABOUT -->
 <section id="about">
   <div class="section-inner">
     <div class="reveal">
@@ -1140,7 +1146,7 @@
       <div class="feature-card reveal">
         <span class="card-icon">🌍</span>
         <h3 class="card-title">All Welcome</h3>
-        <p class="card-text">Java, Bedrock, TLauncher, PojavLauncher — everyone can join. Cracked players welcome. X-ray? Go for it.</p>
+        <p class="card-text">Java, Bedrock, TLauncher, PojavLauncher — everyone can join. Cracked players welcome. Just connect and play.</p>
       </div>
     </div>
   </div>
@@ -1148,6 +1154,7 @@
 
 <div class="divider"></div>
 
+<!-- JOIN -->
 <section id="join">
   <div class="section-inner">
     <div class="reveal">
@@ -1163,8 +1170,8 @@
         <div class="join-fields">
           <div class="join-field">
             <div class="field-label">Server IP</div>
-            <div class="field-value" onclick="copyIP('185.207.166.151:19027', this)">
-              <span class="field-text">185.207.166.151:19027</span>
+            <div class="field-value" onclick="copyIP('aethermc.ultramc.co', this)">
+              <span class="field-text">aethermc.ultramc.co</span>
               <span class="copy-btn">⧉</span>
             </div>
           </div>
@@ -1211,6 +1218,7 @@
 
 <div class="divider"></div>
 
+<!-- RULES -->
 <section id="rules">
   <div class="section-inner">
     <div class="reveal" style="text-align:center">
@@ -1252,14 +1260,7 @@
               <div class="rule-card-desc">Found an unlocked chest? It's yours now. Secure your valuables or lose them forever.</div>
             </div>
           </div>
-          <div class="rule-card allowed">
-            <span class="rule-card-icon">🔍</span>
-            <div class="rule-card-body">
-              <div class="rules-badge badge-allowed">✓ Allowed</div>
-              <div class="rule-card-name">X-Ray</div>
-              <div class="rule-card-desc">Find the diamonds, find the hidden bases. Whatever it takes to survive and dominate.</div>
-            </div>
-          </div>
+
           <div class="rule-card allowed">
             <span class="rule-card-icon">🗡️</span>
             <div class="rule-card-body">
@@ -1299,6 +1300,14 @@
             </div>
           </div>
           <div class="rule-card banned">
+            <span class="rule-card-icon">🔍</span>
+            <div class="rule-card-body">
+              <div class="rules-badge badge-banned">✗ Banned</div>
+              <div class="rule-card-name">X-Ray</div>
+              <div class="rule-card-desc">X-ray clients and texture packs are not allowed. Get caught and it's a permanent ban.</div>
+            </div>
+          </div>
+          <div class="rule-card banned">
             <span class="rule-card-icon">🔁</span>
             <div class="rule-card-body">
               <div class="rules-badge badge-banned">✗ Banned</div>
@@ -1314,12 +1323,13 @@
 
 <div class="divider"></div>
 
+<!-- GALLERY -->
 <section id="gallery">
   <div class="section-inner">
     <div class="reveal">
       <div class="section-tag">From the World</div>
       <h2 class="section-title"><em>Gallery</em> 📸</h2>
-      <p class="section-desc">Screenshots from the Aether SMP. Submit yours on Discord!</p>
+      <p class="section-desc">Screenshots from the Aether world. Submit yours on Discord!</p>
     </div>
 
     <div class="gallery-single reveal">
@@ -1339,6 +1349,7 @@
 
 <div class="divider"></div>
 
+<!-- FAQ -->
 <section id="faq">
   <div class="section-inner">
     <div class="reveal" style="text-align:center">
@@ -1361,7 +1372,7 @@
           Can I join on mobile or console?
           <span class="faq-icon">+</span>
         </button>
-        <div class="faq-answer">Yes! Bedrock Edition works on mobile (iOS/Android), Windows 10/11, and consoles. Use 185.207.166.151 with port 19027.</div>
+        <div class="faq-answer">Yes! Bedrock Edition works on mobile (iOS/Android), Windows 10/11, and consoles. Use 185.207.166.151 with port 19027 for Bedrock.</div>
       </div>
 
       <div class="faq-item reveal">
@@ -1401,6 +1412,7 @@
 
 <div class="divider"></div>
 
+<!-- CTA -->
 <section id="cta">
   <div class="section-inner">
     <div class="reveal">
@@ -1415,6 +1427,7 @@
   </div>
 </section>
 
+<!-- FOOTER -->
 <footer>
   <div class="footer-logo">⟁ <span>AETHER</span> SMP</div>
   <div class="footer-copy">© 2026 AETHER SMP · ALL RIGHTS RESERVED</div>
@@ -1425,9 +1438,11 @@
   </div>
 </footer>
 
+<!-- TOAST -->
 <div class="toast" id="toast">✓ COPIED!</div>
 
 <script>
+// --- STARS ---
 const canvas = document.getElementById('stars');
 const ctx = canvas.getContext('2d');
 let stars = [];
@@ -1468,6 +1483,7 @@ initStars();
 window.addEventListener('resize', () => { resize(); initStars(); });
 requestAnimationFrame(drawStars);
 
+// --- COPY ---
 let toastTimeout;
 function copyIP(text, el) {
   navigator.clipboard.writeText(text).then(() => {
@@ -1478,6 +1494,7 @@ function copyIP(text, el) {
   });
 }
 
+// --- FAQ ---
 function toggleFaq(btn) {
   const item = btn.parentElement;
   const isOpen = item.classList.contains('open');
@@ -1485,6 +1502,7 @@ function toggleFaq(btn) {
   if (!isOpen) item.classList.add('open');
 }
 
+// --- SCROLL REVEAL ---
 const observer = new IntersectionObserver((entries) => {
   entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); } });
 }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
@@ -1495,6 +1513,7 @@ document.querySelectorAll('.reveal').forEach((el, i) => {
 });
 
 
+// --- RULES TABS ---
 function switchTab(tab, btn) {
   document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
   document.querySelectorAll('.rules-panel').forEach(p => p.classList.remove('active'));
@@ -1502,36 +1521,32 @@ function switchTab(tab, btn) {
   document.getElementById('panel-' + tab).classList.add('active');
 }
 
+// --- FAKE ONLINE COUNT ---
 async function fetchPlayerCount() {
   const el = document.getElementById('online-count');
+  const maxEl = document.getElementById('max-slots');
   try {
-    // mcsrvstat.us API - free, no key needed, works with IP:port
     const res = await fetch('https://api.mcsrvstat.us/3/185.207.166.151:19027');
     const data = await res.json();
     if (data.online) {
       const count = data.players?.online ?? 0;
       el.textContent = count;
       el.style.color = count > 0 ? '#34d399' : 'var(--accent)';
-      // Update max slots live from server
-      const maxEl = document.getElementById('max-slots');
       if (maxEl && data.players?.max) maxEl.textContent = data.players.max.toLocaleString() + '+';
     } else {
       el.textContent = '0';
       el.style.color = '#f87171';
-      // Mark server offline
-      document.querySelector('.status-badge').innerHTML =
-        '<span style="width:6px;height:6px;border-radius:50%;background:#f87171;box-shadow:0 0 8px #f87171;display:inline-block"></span> Server Offline';
-      document.querySelector('.status-badge').style.background = 'rgba(248,113,113,0.1)';
-      document.querySelector('.status-badge').style.borderColor = 'rgba(248,113,113,0.3)';
-      document.querySelector('.status-badge').style.color = '#f87171';
+      const badge = document.querySelector('.status-badge');
+      if (badge) {
+        badge.innerHTML = '<span style="width:6px;height:6px;border-radius:50%;background:#f87171;box-shadow:0 0 8px #f87171;display:inline-block"></span> Server Offline';
+        badge.style.background = 'rgba(248,113,113,0.1)';
+        badge.style.borderColor = 'rgba(248,113,113,0.3)';
+        badge.style.color = '#f87171';
+      }
     }
-  } catch(e) {
-    el.textContent = '?';
-  }
+  } catch(e) { el.textContent = '?'; }
 }
-
 fetchPlayerCount();
-// Refresh every 60 seconds
 setInterval(fetchPlayerCount, 60000);
 </script>
 </body>
