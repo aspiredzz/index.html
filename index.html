@@ -1198,7 +1198,7 @@
           </div>
           <div class="join-field">
             <div class="field-label">Address</div>
-            <div class="field-value" onclick="copyIP('185.207.166.151', this)">
+            <div class="field-value" onclick="copyIP('185.207.166.49', this)">
               <span class="field-text">185.207.166.151</span>
               <span class="copy-btn">⧉</span>
             </div>
@@ -1526,7 +1526,7 @@ async function fetchPlayerCount() {
   const el = document.getElementById('online-count');
   const maxEl = document.getElementById('max-slots');
   try {
-    const res = await fetch('https://api.mcsrvstat.us/3/185.207.166.151:19027');
+    const res = await fetch('https://api.mcsrvstat.us/3/185.207.166.49:19010');
     const data = await res.json();
     if (data.online) {
       const count = data.players?.online ?? 0;
